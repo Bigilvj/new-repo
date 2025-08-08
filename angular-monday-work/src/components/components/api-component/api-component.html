@@ -1,0 +1,44 @@
+<div class="layout">
+  <div class="apiBtns">
+    <button (click)="showGetResult()">Get-Api</button>
+    <button (click)="showPutResult()">Put-Api</button>
+    <button (click)="showPostResult()">Post-Api</button>
+  </div>
+
+
+  <div class="center" *ngIf="showGet">
+    <ul>
+      <li *ngFor="let user of users">
+        {{ user.name }} - {{ user.email }}
+      </li>
+    </ul>
+  </div>
+
+  
+  <div class="center" *ngIf="showPut">
+    <ul>
+      <li *ngFor="let use of usersPut">
+        <strong>Name:</strong> {{ use.name }} <br />
+        <strong>userName:</strong> {{ use.userName }} <br />
+        <strong>email:</strong> {{ use.email }} <br />
+        <strong>user.age:</strong> {{ use.age }} <br />
+        <strong>mobile:</strong> {{ use.mobile }} <br />
+      </li>
+    </ul>
+  </div>
+
+<div *ngIf="postResult" class="center">
+  <p><strong>ID:</strong> {{ postResult.id }}</p>
+  <p><strong>Title:</strong> {{ postResult.title }}</p>
+  <p><strong>Body:</strong> {{ postResult.body }}</p>
+</div>
+
+ 
+</div>
+<div class="iframe-container" *ngIf="showIframe">
+  <button class="close-btn" (click)="closeIframe()">×</button>
+  <iframe src="https://jsonplaceholder.typicode.com/" ></iframe>
+</div>
+
+
+

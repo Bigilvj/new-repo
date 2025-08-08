@@ -1,0 +1,84 @@
+<p>pipes works!</p>
+{{name | uppercase}}<br>
+{{uppercase | lowercase}}
+<div>
+    <h3>Date pipes</h3>
+{{date | date:'short'}}<br>
+{{date | date:'medium'}}<br>
+{{date | date:'full'}}<br>
+{{date | date:'shortDate'}}
+</div>
+
+<div>
+    <h3>currency pipe</h3>
+    {{amount | currency:'INR'}}<br>
+    {{amount | currency:'EUR'}}<br>
+    {{amount | currency:'CAD'}}<br>
+    {{amount | currency:'GBP'}}<br>
+    {{amount | currency:'JPY'}}<br>
+    {{amount | currency:'CNY'}}<br>
+    {{amount | currency:'KRW'}}<br>
+
+</div>
+
+<div>
+    <h3>async</h3>
+    {{time| async}}
+
+    <h3>decimalPipe</h3>
+    {{pi|number:'4.1-5'}}<br>
+    {{pi|number}}<br>
+     {{pi|number:'1.2-2'}}<br>
+     {{pi|number:'3.1-2'}}<br>
+     {{ value | number:'1.2-2'}}<br>
+     {{value | number:'3.0-7'}}
+
+     
+</div>
+
+<div>
+    <h3>i18nPlural-Pipe</h3>
+    <p>{{ messageCount | i18nPlural: messages }}</p>
+
+</div>
+<div><h3>Json pipe</h3>
+    <p>Without JSON pipe:</p>
+    <pre>{{ object }}</pre>
+    <p>With JSON pipe:</p>
+    <pre>{{ object | json }}</pre>
+  </div>
+
+
+  <div>
+    <h3>KeyValue pair-pipe</h3>
+<ul>
+  <li *ngFor="let entry of user | keyvalue">
+    {{ entry.key }}: {{ entry.value }}
+  </li>
+</ul>
+</div>
+
+<div>
+    <h3>percentage Pipe</h3>
+    {{num| percent}}<br>
+    {{number|percent}}<br>
+      {{number|percent}}<br>
+        {{number|percent: '4.3-5'}}<br>
+</div>
+
+
+<div>
+    <h3>slice pipe</h3>
+    <ul>
+        <li *ngFor="let fruit of fruits |slice:0:3">
+            {{fruit}}
+
+        </li>
+    </ul>
+</div>
+
+<div>
+    <h2>title case</h2>
+    {{title|titlecase}}<br>
+    {{title2|titlecase}}
+</div>

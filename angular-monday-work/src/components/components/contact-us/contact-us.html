@@ -1,0 +1,71 @@
+<div class="layout">
+  <div class="contactbtns" appHighlight="lightgray">
+    <button (click)="showcontact()">contact-us</button>
+    <button (click)="showTemplate()">template-form</button>
+    <button (click)="showReactive()">reactive-form</button>
+  </div>
+
+  <div class="contacts">
+
+    <!-- Contact Info -->
+    <div *ngIf="contactVisible" class="contact">
+      <p>contact-us works!</p>
+      Name: {{ contactInfo.Name }}<br>
+      Email: {{ contactInfo.Email }}<br>
+      Phone: {{ contactInfo.Phone }}
+    </div>
+
+    <!-- Template-driven Form -->
+    <div *ngIf="templateFormVisible">
+     
+      <form #templateForm="ngForm" (ngSubmit)="submitForm(templateForm)">
+         <h2>Template-driven Form</h2>
+       <div class="row"><label>Name:</label> <input type="text" name="name" [(ngModel)]="formData.name" required #nameRef="ngModel" /></div>
+        <div *ngIf="nameRef.touched && nameRef.invalid">
+          <p style="color:red">Name is required</p>
+        </div>
+
+       <div class="row"><label>Email:</label><input type="email" name="email" [(ngModel)]="formData.email" required email #emailRef="ngModel" /></div>
+        <div *ngIf="emailRef.invalid && (emailRef.touched || emailRef.dirty)">
+          <p *ngIf="emailRef.errors?.['required']" style="color:red">Email is required</p>
+          <p *ngIf="emailRef.errors?.['email']" style="color:red">Invalid email format</p>
+        </div>
+
+        <button type="submit">Submit Template Form</button>
+      </form>
+    </div>
+
+    <!-- Reactive Form -->
+    <div *ngIf="reactTemplateVisible">
+      <form [formGroup]="contactReactiveForm" (ngSubmit)="submitReactiveForm()">
+        <h2>Reactive Form</h2>
+        <div class="row"><label>Name:</label>
+        <input type="text" formControlName="name" />
+        </div>
+        <div *ngIf="contactReactiveForm.get('name')?.touched && contactReactiveForm.get('name')?.invalid">
+          <p *ngIf="contactReactiveForm.get('name')?.errors?.['required']" style="color:red">
+            Name is required
+          </p>
+        </div>
+
+        <div class="row"><label>Email:</label>
+        <input type="email" formControlName="email" />
+        </div>
+        <div *ngIf="contactReactiveForm.get('email')?.touched && contactReactiveForm.get('email')?.invalid">
+          <p *ngIf="contactReactiveForm.get('email')?.errors?.['required']" style="color:red">
+            Email is required
+          </p>
+          <p *ngIf="contactReactiveForm.get('email')?.errors?.['email']" style="color:red">
+            Invalid email format
+          </p>
+        </div>
+
+        <button type="submit">Submit Reactive Form</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+

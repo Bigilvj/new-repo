@@ -1,0 +1,89 @@
+
+
+.contacts {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px 0px 300px;
+   
+}   
+.contactbtns button{
+
+   width:140px;
+   height:30px;
+   margin-top: 5px;
+   gap:15px;
+   margin:3px;
+     background: linear-gradient(to right, #4CAF50, #d8a9c9);
+     border-radius: 10px;
+   
+}
+.contactbtns{
+   width:160px;
+    background-color:rgb(232, 241, 232);
+    overflow-y: auto;
+    height: 100vh;
+    padding: 10px;;
+      
+}
+
+
+  .contact {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  form {
+    background-color: #fffbe6;
+    padding: 0px 20px 20px 20px;
+    display: inline-block;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    input {
+      display: block;
+      width: 200px;
+      padding: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      margin:10px;
+    }
+    label{
+      margin: 10px;
+    }
+
+    button[type="submit"] {
+      background:linear-gradient(to right, #0bb811, #b1f19e);
+      color: white;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 15px;
+
+    
+    }
+  }
+.layout{
+  display: flex;
+}
+.row{
+  flex-direction: row;
+  display: flex;
+  
+}
+// input{
+//   margin-bottom: 7px;
+// }
+
+
+
+
+
+

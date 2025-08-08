@@ -1,0 +1,22 @@
+<div class="center">
+
+<div *ngIf="user" class="user-details">
+    <img *ngIf="user.avatar" [src]="'assets/' + user.avatar" alt="Avatar">
+  <h3>{{ user.name }}</h3>
+  <p><strong>Name:</strong><i>{{user.name}}</i></p>
+  <p><strong>Email:</strong><i> {{ user.email }}</i></p>
+  <p><strong>ID:</strong> <i>{{ user.id }}</i></p>
+  <p><strong>Age:</strong><i>{{user.age}}</i></p>
+  
+</div>
+
+<!-- <button (click)="getUsersData() ">photos</button>
+<ul>
+        <li *ngFor="let user of users">
+            {{ user.name }} - {{ user.email }}
+        </li>
+    </ul> -->
+
+
+
+</div>

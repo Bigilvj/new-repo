@@ -1,0 +1,13 @@
+<div class="nav">
+
+<p>nav-component works!</p>
+<div class="btn">
+<button *ngFor="let user of users; let index = index" (click)="displayUserInfo(user)">
+   
+    {{user.name}}
+    
+
+</button>
+</div>
+
+</div>

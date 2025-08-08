@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-home-component',
+  standalone: false,
+  templateUrl: './home-component.html',
+  styleUrl: './home-component.scss'
+})
+export class HomeComponent {
+    title = 'Angular Data Binding';
+    oneWay='One way Data Binding';
+    twoWay='Two Way Data Binding';
+
+}

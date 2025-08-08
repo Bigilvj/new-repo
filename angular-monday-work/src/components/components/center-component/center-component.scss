@@ -1,0 +1,29 @@
+.center{
+
+      flex: 1;
+    background-color: rgb(159, 163, 159);
+      
+       height: 100%;
+        overflow: auto;
+         
+}
+img{
+ width:80px;
+ height:80px; 
+ float:right;
+ margin-top: 30px;
+}
+.user-details{
+   margin:50px 300px 0px 300px;
+   float:left;
+  border:2px solid black;
+  width:350px;
+  height:250px;
+  padding:30px;
+   
+}
+strong,p{
+  display:flex;
+  gap:3px;
+}
+

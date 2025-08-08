@@ -1,0 +1,5 @@
+<div class="mainContainer">
+<app-nav-component (selectedUser)="onUserSelected($event)"></app-nav-component>
+
+<app-center-component [user]="selectedUserInfo"></app-center-component>
+</div>
